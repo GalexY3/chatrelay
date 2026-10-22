@@ -1,0 +1,36 @@
+{
+  "name": "chatrelay-local",
+  "version": "1.0.0-rc.1",
+  "description": "Delegate bounded reasoning tasks from MCP agents to your ChatGPT web session.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "files": ["src", "extension", "docs", "README.md", "LEEME.es.md", "LICENSE", "SECURITY.md", "PRIVACY.md", "CHANGELOG.md"],
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "chatrelay": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js serve",
+    "mcp": "node src/cli.js mcp",
+    "test": "node --test",
+    "test:browser": "playwright test",
+    "test:smoke": "node scripts/browser-smoke.js",
+    "package:extension": "node scripts/package-extension.js",
+    "check": "node scripts/check.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "playwright-core": "1.64.1",
+    "ws": "^8.22.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "fflate": "^0.8.3",
+    "linkedom": "^0.18.12"
+  }
+}
