@@ -1,0 +1,22 @@
+name: Feature request
+description: Propose a concrete improvement to the delegation workflow.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: What does the current workflow make difficult?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the outcome and any useful alternative.
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Permissions, usage and validation
+      description: Note any new permissions, account access, provider usage route or way to test the improvement. Keep savings claims measurable.

@@ -1,0 +1,43 @@
+name: Bug report
+description: Report a reproducible problem with the local bridge or extension.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste prompts, conversations, account details, pairing codes/tokens, cookies or browser profiles.
+        Report suspected security issues through SECURITY.md instead of a public issue.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Problem and expected behavior
+      description: Include a minimal synthetic example and reproduction steps.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Environment
+      description: ChatRelay version/commit, OS, Node, pnpm, browser and MCP host versions.
+    validations:
+      required: true
+  - type: dropdown
+    id: state
+    attributes:
+      label: Task state
+      options:
+        - No task submitted
+        - queued
+        - dispatched
+        - running
+        - completed
+        - failed
+        - cancelled
+        - uncertain
+        - Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: Remove secrets and user content. State whether the task may already have been submitted; do not retry an uncertain submission for this report.
