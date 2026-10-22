@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "ChatRelay — local reasoning delegate",
+  "version": "1.0.0",
+  "version_name": "1.0.0-rc.1",
+  "description": "Receive user-directed tasks from a paired local MCP server and return ChatGPT answers.",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "scripting", "alarms"],
+  "host_permissions": ["https://chatgpt.com/*"],
+  "background": { "service_worker": "worker.js" },
+  "action": { "default_popup": "popup.html", "default_title": "ChatRelay" },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src ws://127.0.0.1:*"
+  }
+}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>ChatRelay</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <h1>ChatRelay <small id="version"></small></h1>
+  <p>Let your agent delegate reasoning to ChatGPT Chat.</p>
+  <form id="pair">
+    <label for="code">One-time connection code</label><input id="code" type="password" autocomplete="off" placeholder="cr1:39391:…">
+    <p class="help">Run <code>chatrelay setup --extension</code>, then paste its code. It expires in two minutes. No API key or ChatGPT password needed.</p>
+    <details><summary>Advanced connection</summary>
+      <label for="port">Local port</label><input id="port" type="number" min="1024" max="65535" value="39391">
+      <label for="token">Local pairing token</label><input id="token" type="password" autocomplete="off" pattern="[a-f0-9]{64}">
+    </details>
+    <button type="submit">Connect</button><button id="disconnect" type="button">Disconnect</button>
+  </form>
+  <p id="status" role="status">Checking connection…</p>
+  <p id="activity" class="help"></p><button id="open-task" type="button">Open last task</button>
+  <p class="help">Free and open source. Uses your ChatGPT account and its limits. Only sends when Chat mode is confirmed; Work and unknown modes are blocked. Savings are not yet measured.</p>
+  <script src="popup.js"></script>
+</body></html>
