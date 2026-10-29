@@ -28,10 +28,13 @@ importers:
         specifier: ^0.8.3
         version: 0.8.3
       linkedom:
-        specifier: ^0.18.12
-        version: 0.18.13
+        specifier: ^0.18.14
+        version: 0.18.14
 
 packages:
+
+  '@acemir/cssom@0.9.32':
+    resolution: {integrity: sha512-OijrAUu7rrJhSIoHNg6LMPS5e344nwUHA+1EFYYjrh64D+GmytUsfBQjci45TjT+rd5Spsp8B5xsZDT+TgyXXQ==}
 
   '@hono/node-server@2.1.5':
     resolution: {integrity: sha512-MgP/I06GdvsilDspMk/qmRzpk8LOUStP6jFAbSRi40W09DhoyUn+Mj7eyKICPqeYKybOjVFLVIAQzvu1bfIa7Q==}
@@ -124,9 +127,6 @@ packages:
   css-what@8.0.0:
     resolution: {integrity: sha512-DH0Bqq3DNp5tdOReuNyAA+Ev4Y2GS5FMbZpeTLP6C4CDi0h5nL0BmUPChXw3o/qbHLDWHl49sbNqQVY7bMSDdw==}
     engines: {node: '>=20.19.0'}
-
-  cssom@0.5.0:
-    resolution: {integrity: sha512-iKuQcq+NdHqlAcwUY0o/HL69XQrUaQdMjmStJ8JFmUaiiQErlhrmuigkg/CU4E2J0IyUKUrMAgl36TvN67MqTw==}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -318,8 +318,8 @@ packages:
   json-schema-typed@8.0.2:
     resolution: {integrity: sha512-fQhoXdcvc3V28x7C7BMs4P5+kNlgUURe2jmUT1T//oBRMDrqy1QPelJimwZGo7Hg9VPV3EQV5Bnq4hbFy2vetA==}
 
-  linkedom@0.18.13:
-    resolution: {integrity: sha512-ES/o9qotMpzpN2MHs+Iq/JcVoOj8Fa5wiQYrTdFpvAnwXL0g66XHHUc9WUMk6nAlBtGsFQ24ne+SYnvnaQ2FSw==}
+  linkedom@0.18.14:
+    resolution: {integrity: sha512-BRUnkOm4YR5vo+qI3j0EbungB0vZPSCue5AdnTQRaxAGSbsOZiBFRO0rh4zlo8qXUhli8pxvnpEXDklMnlq2Rg==}
     engines: {node: '>=16'}
     peerDependencies:
       canvas: '>= 2'
@@ -513,6 +513,8 @@ packages:
 
 snapshots:
 
+  '@acemir/cssom@0.9.32': {}
+
   '@hono/node-server@2.1.5(hono@4.13.13)':
     dependencies:
       hono: 4.13.13
@@ -617,8 +619,6 @@ snapshots:
       nth-check: 3.0.1
 
   css-what@8.0.0: {}
-
-  cssom@0.5.0: {}
 
   debug@4.4.3:
     dependencies:
@@ -825,10 +825,10 @@ snapshots:
 
   json-schema-typed@8.0.2: {}
 
-  linkedom@0.18.13:
+  linkedom@0.18.14:
     dependencies:
+      '@acemir/cssom': 0.9.32
       css-select: 7.0.0
-      cssom: 0.5.0
       html-escaper: 3.0.3
       htmlparser2: 10.1.0
       uhyphen: 0.2.0
